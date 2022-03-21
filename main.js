@@ -50,7 +50,7 @@ async function  getData () {
 										let invoice = await bitrix24.callMethod('crm.invoice.get', {ID: await invoiceID.result[0].ID});
 										let user = await bitrix24.callMethod('user.get', {ID: invoice.result.RESPONSIBLE_ID});
 										responsible = `Ответственный: ${user.result[0].NAME + ' ' + user.result[0].LAST_NAME}`;
-										linkDeal = `Сделка: https://shb.bitrix24.ru/crm/deal/details/${invoice.result.UF_DEAL_ID}/`;
+										linkDeal = `Сделка: https://company.bitrix24.ru/crm/deal/details/${invoice.result.UF_DEAL_ID}/`;
 								}
 						}
 
